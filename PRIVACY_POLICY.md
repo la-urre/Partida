@@ -34,9 +34,3 @@ L'application Partida collecte plusieurs données personnelles des utilisateurs:
 * Les disponibilités des utilisateurs sont collectées par l'application lors de l'inscription à un tournoi.
 * Elles permettent à Partida d'optimiser la création des poules et du calendrier
 * Les disponibilités ne sont partagées avec aucun service tiers
-
-## RGPD
-
-En respect du Règlement Général sur la Protection des Données (RGPD), tout utilisateur peut demander à tout moment à vérifier, rectifier, exporter ou effacer ses données.
-
-Pour toute question ou demande, nous contacter: contact@partida.eus
