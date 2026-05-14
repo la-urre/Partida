@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partida - Vivez la pelote intensément</title>
+    <meta name="description" content="L'application gratuite pour organiser vos tournois de pelote, suivre les scores en direct et rester connecté à votre club.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        basqueGreen: '#00796B',
+                        strongBasqueGreen: '#004D40',
+                        basqueRed: '#B53539',
+                        lightGreen: '#DBE7C9',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .phone-shadow { box-shadow: 0 50px 100px -20px rgba(0, 121, 107, 0.15), 0 30px 60px -30px rgba(0, 0, 0, 0.3); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-3">
+                    <img src="assets/img/app_icon.png" alt="Partida Logo" class="h-8 w-8">
+                    <span class="text-2xl font-extrabold tracking-tight text-strongBasqueGreen">Partida</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#features" class="hover:text-basqueGreen transition-colors">Joueurs</a>
+                    <a href="#organizers" class="hover:text-basqueGreen transition-colors">Organisateurs</a>
+                    <a href="#download" class="bg-strongBasqueGreen text-white px-5 py-2 rounded-full hover:opacity-90 transition-all shadow-lg shadow-strongBasqueGreen/20">Télécharger</a>
+                </div>
+                <div class="md:hidden">
+                    <a href="#download" class="text-xs font-bold bg-basqueGreen text-white px-4 py-2 rounded-full">Installer</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-20 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight text-slate-900 mb-6">
+                        La pelote <br><span class="text-basqueGreen">dans la poche</span>
+                    </h1>
+                    <p class="text-lg lg:text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0">
+                        L'application gratuite pour gérer vos tournois, suivre les résultats en direct et ne rien manquer.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
+                        <a href="https://apps.apple.com/fr/app/partida/id6742057370" target="_blank" class="transition-transform hover:scale-105 active:scale-95">
+                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr?size=250x83" alt="Download on the App Store" class="h-14">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=eus.partida" target="_blank" class="transition-transform hover:scale-105 active:scale-95">
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="Get it on Google Play" class="h-[78px]">
+                        </a>
+                    </div>
+                    <p class="text-sm font-medium text-basqueGreen flex items-center justify-center lg:justify-start gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        100% Gratuit pour tous
+                    </p>
+                </div>
+                
+                <div class="mt-16 lg:mt-0 flex justify-center lg:justify-end relative">
+                    <div class="relative w-72 lg:w-80">
+                        <div class="absolute -inset-4 bg-basqueGreen/10 blur-3xl rounded-full"></div>
+                        <div class="relative z-10 rounded-[3rem] border-8 border-slate-900 phone-shadow overflow-hidden">
+                            <img src="assets/img/home-ok.png" alt="Partida App Home" class="carousel-item w-full h-auto transition-opacity duration-1000 opacity-100">
+                            <img src="assets/img/game-ok.png" alt="Partida App Game" class="carousel-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                            <img src="assets/img/ios-table.jpg" alt="Partida App Table" class="carousel-item absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[1000px] h-[1000px] bg-lightGreen/30 rounded-full mix-blend-multiply filter blur-3xl opacity-50 pointer-events-none"></div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Tous vos tournois au même endroit</h2>
+                <p class="mt-4 text-lg text-slate-600">Partida regroupe tout ce dont vous avez besoin pour suivre vos compétitions préférées.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-lightGreen text-basqueGreen rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Inscriptions</h3>
+                    <p class="text-slate-600 leading-relaxed">Visitez les tournois actifs et inscrivez vos équipes, en renseignant vos disponibilités et indisponibilités.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-lightGreen text-basqueGreen rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tableaux</h3>
+                    <p class="text-slate-600 leading-relaxed">Visualisez l'ensemble des informations des tournois : poules, calendriers, résultats, classements et phases finales.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-lightGreen text-basqueGreen rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Notifications</h3>
+                    <p class="text-slate-600 leading-relaxed">Recevez des notifications directement sur votre téléphone : changement de calendrier, statut de l'inscription, rappels de parties, et bien d'autres.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Showcase -->
+    <section class="py-12 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:gap-24">
+                <div class="lg:w-1/2 order-2 lg:order-1 flex justify-center gap-6">
+                    <img src="assets/img/game-ok.png" alt="Détails de la partie" class="w-48 lg:w-64 rounded-3xl shadow-2xl rotate-[-3deg] -mr-12 z-10">
+                    <img src="assets/img/ios-table.jpg" alt="Tableau de tournoi" class="w-48 lg:w-64 rounded-3xl shadow-2xl rotate-[3deg] mt-12">
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2 mt-16 lg:mt-0">
+                    <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Une interface fluide et intuitive</h2>
+                    <p class="text-lg text-slate-600 mb-8">
+                        Conçue spécifiquement pour la pelote, Partida offre une expérience utilisateur moderne et optimisée :
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-basqueGreen rounded-full p-1 mt-1"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></span>
+                            <span class="text-slate-700 font-medium">Création de compte via Google ou Apple</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-basqueGreen rounded-full p-1 mt-1"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></span>
+                            <span class="text-slate-700 font-medium">Ecran d'accueil personnalisé</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-basqueGreen rounded-full p-1 mt-1"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></span>
+                            <span class="text-slate-700 font-medium">Navigation simple et rapide</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizers Section -->
+    <section id="organizers" class="py-24 bg-strongBasqueGreen text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-12 mb-20">
+                <div class="lg:max-w-2xl">
+                    <h2 class="text-3xl font-extrabold mb-6 sm:text-4xl">Vous organisez un tournoi ?</h2>
+                    <p class="text-xl text-lightGreen/80 leading-relaxed">
+                        Partida simplifie radicalement la gestion de vos compétitions. Finis les casse-têtes de calendrier, les tableaux papier et les fichiers Excel complexes, Partida s'occupe de tout!
+                    </p>
+                </div>
+                <div class="bg-white/10 p-6 rounded-3xl border border-white/20 text-center lg:text-left min-w-[300px]">
+                    <h3 class="text-xl font-bold mb-3 italic uppercase tracking-wider text-lightGreen">Organisateurs</h3>
+                    <p class="text-sm text-lightGreen/80 mb-4">Contactez-nous pour intégrer vos tournois.</p>
+                    <a href="mailto:contact@partida.eus" class="inline-block w-full text-center py-3 bg-white text-strongBasqueGreen font-bold rounded-xl hover:bg-lightGreen transition-colors">
+                        Nous contacter
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
+                <!-- Configuration -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-white/10 p-3 rounded-lg shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
+                    <div>
+                        <h4 class="font-bold text-lg">Configuration</h4>
+                        <p class="text-lightGreen/60 text-sm">Paramétrez vos tournois, spécialités, catégories et créneaux de parties.</p>
+                    </div>
+                </div>
+                <!-- Inscriptions -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-white/10 p-3 rounded-lg shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></div>
+                    <div>
+                        <h4 class="font-bold text-lg">Inscriptions</h4>
+                        <p class="text-lightGreen/60 text-sm">Ouvrez les inscriptions, acceptez ou refusez-les, vérifiez les disponibilités.</p>
+                    </div>
+                </div>
+                <!-- Poules -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-white/10 p-3 rounded-lg shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg></div>
+                    <div>
+                        <h4 class="font-bold text-lg">Poules</h4>
+                        <p class="text-lightGreen/60 text-sm">Configurez la répartition des poules et laissez l'application les créer automatiquement en fonction des disponibilités. Modifiez-les si besoin.</p>
+                    </div>
+                </div>
+                <!-- Calendrier -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-white/10 p-3 rounded-lg shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path><circle cx="8" cy="11" r="0.5"></circle><circle cx="12" cy="11" r="0.5"></circle><circle cx="16" cy="11" r="0.5"></circle><circle cx="8" cy="14" r="0.5"></circle><circle cx="12" cy="14" r="0.5"></circle><circle cx="16" cy="14" r="0.5"></circle><circle cx="8" cy="17" r="0.5"></circle><circle cx="12" cy="17" r="0.5"></circle><circle cx="16" cy="17" r="0.5"></circle></svg></div>
+                    <div>
+                        <h4 class="font-bold text-lg">Calendrier</h4>
+                        <p class="text-lightGreen/60 text-sm">Laissez l'application planifier les rencontres en fonction des disponibilités. Déplacez-les si besoin.</p>
+                    </div>
+                </div>
+                <!-- Classements -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-white/10 p-3 rounded-lg shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 5v5M3 12h4v2H3v2h4M3 19h4v2H4m3 0v2H3M11 7h9M11 14h9M11 21h9" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Classements</h4>
+                        <p class="text-lightGreen/60 text-sm">Laissez l'application calculer et mettre à jour les classements de poule et de série.</p>
+                    </div>
+                </div>
+                <!-- Juges -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-white/10 p-3 rounded-lg shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Juges</h4>
+                        <p class="text-lightGreen/60 text-sm">Assignez des arbitres et permettez-leur de compter et saisir les scores pendant la partie.</p>
+                    </div>
+                </div>
+                <!-- Phases finales -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-white/10 p-3 rounded-lg shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6h4v12H4M8 12h12" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Phases finales</h4>
+                        <p class="text-lightGreen/60 text-sm">Configurez le format des phases finales (barrages, consolante) et laissez l'application générer le tableau en fonction des classements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="download" class="pt-24 relative bg-white overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl font-extrabold text-slate-900 mb-6">Envie d'essayer ?</h2>
+            <p class="text-xl text-slate-600 mb-12 italic">
+                Téléchargez l'application et rejoignez des milliers de joueurs.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+                <a href="https://apps.apple.com/fr/app/partida/id6742057370" target="_blank" class="transition-transform hover:scale-105 active:scale-95">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr?size=250x83" alt="Download on the App Store" class="h-16">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=eus.partida" target="_blank" class="transition-transform hover:scale-105 active:scale-95">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/fr_badge_web_generic.png" alt="Get it on Google Play" class="h-[88px]">
+                </a>
+            </div>
+            
+            <div class="p-6 bg-slate-50 rounded-2xl inline-flex items-center gap-4 text-slate-500 font-medium border border-slate-100 mb-8">
+                <span class="flex h-3 w-3 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-basqueGreen/40 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-basqueGreen"></span>
+                </span>
+                Application 100% gratuite et sans publicité
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <span class="text-2xl font-extrabold text-white mb-6 block">Partida</span>
+                    <p class="max-w-xs leading-relaxed">
+                        L'application de gestion de tournois de pelote basque. Jouez, suivez, organisez.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Légal</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="PRIVACY_POLICY.md" class="hover:text-white transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="RGPD.md" class="hover:text-white transition-colors">RGPD</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="mailto:contact@partida.eus" class="hover:text-white transition-colors">contact@partida.eus</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="py-4 border-t border-slate-800 text-sm text-center">
+                &copy; 2026 Partida. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.carousel-item');
+            let current = 0;
+            
+            setInterval(() => {
+                items[current].classList.replace('opacity-100', 'opacity-0');
+                current = (current + 1) % items.length;
+                items[current].classList.replace('opacity-0', 'opacity-100');
+            }, 4000);
+        });
+    </script>
+
+</body>
+</html>
