@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partida - La pelote dans la poche</title>
-    <meta name="description" content="L'application gratuite pour gérer vos tournois, suivre les résultats en direct et ne rien manquer.">
+    <meta name="description" content="L'application gratuite pour gérer vos tournois de pelote basque, suivre les résultats en direct et ne rien manquer.">
+    <link rel="canonical" href="https://partida.eus/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://partida.eus/">
+    <meta property="og:title" content="Partida - La pelote dans la poche">
+    <meta property="og:description" content="L'application gratuite pour gérer vos tournois de pelote basque, suivre les résultats en direct et ne rien manquer.">
+    <meta property="og:image" content="https://partida.eus/assets/img/app_icon.png">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://partida.eus/">
+    <meta property="twitter:title" content="Partida - La pelote dans la poche">
+    <meta property="twitter:description" content="L'application gratuite pour gérer vos tournois de pelote basque, suivre les résultats en direct et ne rien manquer.">
+    <meta property="twitter:image" content="https://partida.eus/assets/img/app_icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -29,6 +45,21 @@
         .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
         .phone-shadow { box-shadow: 0 50px 100px -20px rgba(0, 121, 107, 0.15), 0 30px 60px -30px rgba(0, 0, 0, 0.3); }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Partida",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "SportsApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "description": "L'application gratuite pour gérer vos tournois de pelote basque, suivre les résultats en direct et ne rien manquer."
+    }
+    </script>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
@@ -306,8 +337,8 @@
                 <div>
                     <h4 class="text-white font-bold mb-6">Légal</h4>
                     <ul class="space-y-4 text-sm">
-                        <li><a href="PRIVACY_POLICY.md" class="hover:text-white transition-colors">Politique de confidentialité</a></li>
-                        <li><a href="RGPD.md" class="hover:text-white transition-colors">RGPD</a></li>
+                        <li><a href="PRIVACY_POLICY.html" class="hover:text-white transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="RGPD.html" class="hover:text-white transition-colors">RGPD</a></li>
                     </ul>
                 </div>
                 <div>

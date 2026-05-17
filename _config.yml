@@ -2,6 +2,7 @@ title: Partida
 description: L'application mobile qui met la pelote dans la poche. Gratuite et intuitive, pour les joueurs et organisateurs.
 baseurl: ""
 url: "https://partida.eus"
+lang: fr
 
 # Exclude these files from being processed
 exclude:
