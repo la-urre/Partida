@@ -39,13 +39,10 @@
                     <img src="assets/img/app_icon.png" alt="Partida Logo" class="h-8 w-8">
                     <span class="text-2xl font-extrabold tracking-tight text-strongBasqueGreen">Partida</span>
                 </div>
-                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <div class="flex items-center space-x-4 sm:space-x-8 text-xs sm:text-sm font-semibold text-slate-600">
                     <a href="#features" class="hover:text-basqueGreen transition-colors">Joueurs</a>
                     <a href="#organizers" class="hover:text-basqueGreen transition-colors">Organisateurs</a>
-                    <a href="#download" class="bg-strongBasqueGreen text-white px-5 py-2 rounded-full hover:opacity-90 transition-all shadow-lg shadow-strongBasqueGreen/20">Télécharger</a>
-                </div>
-                <div class="md:hidden">
-                    <a href="#download" class="text-xs font-bold bg-basqueGreen text-white px-4 py-2 rounded-full">Installer</a>
+                    <a href="#download" class="bg-strongBasqueGreen text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full hover:opacity-90 transition-all shadow-lg shadow-strongBasqueGreen/20">Télécharger</a>
                 </div>
             </div>
         </div>
@@ -218,8 +215,8 @@
                 <!-- Classements -->
                 <div class="flex items-start gap-4">
                     <div class="bg-white/10 p-3 rounded-lg shrink-0">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 5v5M3 12h4v2H3v2h4M3 19h4v2H4m3 0v2H3M11 7h9M11 14h9M11 21h9" />
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 -960 960 960">
+                            <path d="M120-80v-60h100v-30h-60v-60h60v-30H120v-60h120q17 0 28.5 11.5T280-280v40q0 17-11.5 28.5T240-200q17 0 28.5 11.5T280-160v40q0 17-11.5 28.5T240-80H120Zm0-280v-110q0-17 11.5-28.5T160-510h60v-30H120v-60h120q17 0 28.5 11.5T280-560v70q0 17-11.5 28.5T240-450h-60v30h100v60H120Zm60-280v-180h-60v-60h120v240h-60Zm180 440v-80h480v80H360Zm0-240v-80h480v80H360Zm0-240v-80h480v80H360Z"/>
                         </svg>
                     </div>
                     <div>
@@ -230,8 +227,8 @@
                 <!-- Juges -->
                 <div class="flex items-start gap-4">
                     <div class="bg-white/10 p-3 rounded-lg shrink-0">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="4" r="2"/><path d="M15.89,8.11C15.5,7.72,14.83,7,13.53,7c-0.21,0-1.42,0-2.54,0C8.24,6.99,6,4.75,6,2H4c0,3.16,2.11,5.84,5,6.71V22h2v-6h2 v6h2V10.05L18.95,14l1.41-1.41L15.89,8.11z"/>
                         </svg>
                     </div>
                     <div>
@@ -242,13 +239,25 @@
                 <!-- Phases finales -->
                 <div class="flex items-start gap-4">
                     <div class="bg-white/10 p-3 rounded-lg shrink-0">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 6h4v12H4M8 12h12" />
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3h6v6H3M3 15h6v6H3M9 6h6v12H9M15 12h6" />
                         </svg>
                     </div>
                     <div>
                         <h4 class="font-bold text-lg">Phases finales</h4>
                         <p class="text-lightGreen/60 text-sm">Configurez le format des phases finales (barrages, consolante) et laissez l'application générer le tableau en fonction des classements.</p>
+                    </div>
+                </div>
+                <!-- Tableau de bord -->
+                <div class="flex items-start gap-4">
+                    <div class="bg-white/10 p-3 rounded-lg shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Tableau de bord</h4>
+                        <p class="text-lightGreen/60 text-sm">Suivez en un coup d'oeil les points de vigilance : parties à replacer, sans score ou sans juge.</p>
                     </div>
                 </div>
             </div>
