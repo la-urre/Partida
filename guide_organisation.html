@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide d'utilisation pour organisateurs - Partida</title>
+    <meta name="description" content="Guide complet et détaillé pour organiser votre tournoi de pelote basque avec l'application Partida.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        basqueGreen: '#00796B',
+                        strongBasqueGreen: '#004D40',
+                        basqueRed: '#B53539',
+                        lightGreen: '#DBE7C9',
+                        themeLight: '#F4F9F1',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .phone-shadow { box-shadow: 0 40px 80px -15px rgba(0, 77, 64, 0.2), 0 25px 50px -25px rgba(0, 0, 0, 0.35); }
+        .screenshot-placeholder { 
+            background: #ffffff; 
+            border: 2px dashed #cbd5e1; 
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem;
+            font-style: italic;
+            font-weight: 500;
+        }
+        .active-nav {
+            background-color: #00796B !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/img/app_icon.png" alt="Partida Logo" class="h-8 w-8">
+                    <span class="text-2xl font-extrabold tracking-tight text-strongBasqueGreen">Partida</span>
+                </a>
+                <div class="flex items-center space-x-4 sm:space-x-8 text-xs sm:text-sm font-semibold text-slate-600">
+                    <a href="index.html#download" class="bg-strongBasqueGreen text-white px-4 py-2 sm:px-5 sm:py-2 rounded-full hover:opacity-90 transition-all shadow-lg shadow-strongBasqueGreen/20">Télécharger</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="top" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-strongBasqueGreen text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Guide d'utilisation pour organisateurs
+                </h1>
+                <p class="text-lg lg:text-xl text-lightGreen/80 mb-10 max-w-3xl mx-auto">
+                    Un guide pas-à-pas pour comprendre comment fonctionne l'application Partida.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-6 bg-white border-b border-slate-200 sticky top-16 z-40 glass overflow-x-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex space-x-4 min-w-max pb-2">
+                <a href="#step0" class="step-nav-link px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold hover:bg-basqueGreen hover:text-white transition-all border border-slate-200">0. Prise de contact</a>
+                <a href="#step1" class="step-nav-link px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold hover:bg-basqueGreen hover:text-white transition-all border border-slate-200">1. Configuration</a>
+                <a href="#step2" class="step-nav-link px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold hover:bg-basqueGreen hover:text-white transition-all border border-slate-200">2. Inscriptions</a>
+                <a href="#step3" class="step-nav-link px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold hover:bg-basqueGreen hover:text-white transition-all border border-slate-200">3. Poules</a>
+                <a href="#step4" class="step-nav-link px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold hover:bg-basqueGreen hover:text-white transition-all border border-slate-200">4. Planification</a>
+                <a href="#step5" class="step-nav-link px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold hover:bg-basqueGreen hover:text-white transition-all border border-slate-200">5. Résultats</a>
+                <a href="#step6" class="step-nav-link px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold hover:bg-basqueGreen hover:text-white transition-all border border-slate-200">6. Phases Finales</a>
+                <a href="#step7" class="step-nav-link px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold hover:bg-basqueGreen hover:text-white transition-all border border-slate-200">7. Tableau de bord</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="py-12">
+
+        <!-- STEP 0: PRISE DE CONTACT (White) -->
+        <section id="step0" class="scroll-mt-32 mb-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center lg:text-left">
+                    <span class="text-basqueGreen font-bold tracking-widest uppercase text-sm">Étape 0</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mt-2">Prise de contact</h2>
+                    <p class="text-xl text-slate-600 mt-4 max-w-3xl">Le lancement de votre tournoi commence par un simple échange.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="p-8 bg-white rounded-3xl border border-slate-200 shadow-sm space-y-6">
+                        <h3 class="text-2xl font-bold text-slate-800">Comment démarrer ?</h3>
+                        <p class="text-slate-600">Pour garantir une expérience optimale, nous initialisons votre espace organisateur manuellement. Contactez-nous à l'adresse <a href="mailto:contact@partida.eus" class="text-basqueGreen font-bold hover:underline">contact@partida.eus</a> et fournissez-nous :</p>
+                        
+                        <div class="space-y-6">
+                            <ul class="space-y-6">
+                                <li class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-full bg-lightGreen flex items-center justify-center text-basqueGreen font-bold shrink-0">1</div>
+                                    <span class="text-sm text-slate-700 pt-1.5"><strong>Le nom du tournoi :</strong> Tel qu'il apparaîtra dans l'application.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-full bg-lightGreen flex items-center justify-center text-basqueGreen font-bold shrink-0">2</div>
+                                    <span class="text-sm text-slate-700 pt-1.5"><strong>Le lieu :</strong> Il nous faut référencer l'endroit où le tournoi se jouera.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-8 h-8 rounded-full bg-lightGreen flex items-center justify-center text-basqueGreen font-bold shrink-0">3</div>
+                                    <span class="text-sm text-slate-700 pt-1.5"><strong>Les organisateurs :</strong> Le nom/prénom d'au moins une personne qui s'est déjà connectée à l'application.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="p-10 bg-themeLight rounded-[3rem] border border-basqueGreen/20 shadow-lg relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold text-basqueGreen mb-6">Notre approche</h3>
+                            <p class="text-lg text-slate-700 leading-relaxed italic">
+                                "Nous souhaitons que vous restiez autonome. Une fois ces informations fournies, vous gardez le contrôle total sur la configuration, les inscriptions, le calendrier et les résultats. Partida est là pour vous assister, pas pour décider à votre place."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 1: CONFIGURATION (Theme Light) -->
+        <section id="step1" class="scroll-mt-32 bg-themeLight py-16 border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center lg:text-left">
+                    <span class="text-basqueGreen font-bold tracking-widest uppercase text-sm">Étape 1</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mt-2">Configuration du tournoi</h2>
+                    <p class="text-xl text-slate-600 mt-4 max-w-3xl">La première étape consiste à configurer votre tournoi et définir sa structure.</p>
+                </div>
+
+                <div class="space-y-32">
+                    <!-- 1.1 Spécialités -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">1.1 Spécialités</h3>
+                            <p class="text-slate-600">Une spécialité combine une discipline, un type d'opposition et un lieu de pratique principal.</p>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                                <div>
+                                    <h4 class="font-bold text-basqueGreen text-sm uppercase">Surface</h4>
+                                    <p class="text-sm text-slate-500">Choisissez entre trinquet, mur à gauche, ou fronton place libre.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-basqueGreen text-sm uppercase">Discipline</h4>
+                                    <p class="text-sm text-slate-500">Main nue, pala, xare, etc.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-basqueGreen text-sm uppercase">Opposition</h4>
+                                    <p class="text-sm text-slate-500">Format : Tête-à-tête ou deux contre deux.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-basqueGreen text-sm uppercase">Lieu</h4>
+                                    <p class="text-sm text-slate-500">Lieu où les parties se joueront.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/specialty_configuration.png" alt="Configuration des Spécialités" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1.2 Séries -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="lg:order-2 space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">1.2 Séries</h3>
+                            <p class="text-slate-600">Les séries permettent aux joueurs de tous niveaux de s'inscrire.</p>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                                <div>
+                                    <h4 class="font-bold text-basqueGreen text-sm uppercase">Public ciblé</h4>
+                                    <p class="text-sm text-slate-500">Hommes, femmes, mixte, ou enfants. Ceci est donné uniquement à titre indicatif</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-basqueGreen text-sm uppercase">Score cible</h4>
+                                    <p class="text-sm text-slate-500">Nombre de points pour gagner une partie pour cette série.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-basqueGreen text-sm uppercase">Inscriptions ouvertes</h4>
+                                    <p class="text-sm text-slate-500">Permet d'ouvrir les inscriptions à tous les utilisateurs de Partida, ou au contraire de garder la main et inscrire soi-même les équipes.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-basqueGreen text-sm uppercase">Limitation du nombre de joueurs (optionnel)</h4>
+                                    <p class="text-sm text-slate-500">Limitez le nombre max d'équipes en fonction de votre capacité d'accueil.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-basqueGreen text-sm uppercase">Durée maximum de partie (optionnel)</h4>
+                                    <p class="text-sm text-slate-500">Définissez si une partie peut se gagner au temps, par exemple au bout de 60 minutes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:order-1 flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/category_configuration.png" alt="Configuration des Séries" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1.3 Créneaux -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">1.3 Créneaux</h3>
+                            <p class="text-slate-600">Définissez les plages horaires sur lesquelles les parties vont se jouer.</p>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                                <p class="text-sm text-slate-700">Configurez les créneaux de jeu, par exemple les lundis de 18h à 19h. Ces créneaux seront proposés aux joueurs lors de l'inscription pour qu'ils définissent leurs disponibilités, et seront utilisés pour la planification automatique.</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/timeslot_configuration.png" alt="Configuration des Créneaux" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 2: INSCRIPTIONS (White) -->
+        <section id="step2" class="scroll-mt-32 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center lg:text-left">
+                    <span class="text-basqueGreen font-bold tracking-widest uppercase text-sm">Étape 2</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mt-2">Gestion des inscriptions</h2>
+                    <p class="text-xl text-slate-600 mt-4 max-w-3xl">Suivez, validez et ajustez les engagements des équipes.</p>
+                </div>
+
+                <div class="space-y-32">
+                    <!-- 2.1 Liste des inscrits -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">2.1 Liste des inscrits</h3>
+                            <p class="text-slate-600">Visualisez en un coup d'oeil toutes les équipes inscrites dans chaque série. Inscrivez vous-même des équipes. Filtrez selon le statut de l'inscription (acceptée, refusée, en attente de validation).</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/categories_registrations.png" alt="Liste des Inscriptions" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2.2 Validation -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="lg:order-2 space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">2.2 Validation</h3>
+                            <p class="text-slate-600">Validez ou refusez les équipes, les joueurs recevront une notification immédiate. Vous pourrez changer d'avis à tout moment.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/validate_registration.png" alt="Validation des Inscriptions" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2.3 Edition -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">2.3 Edition</h3>
+                            <p class="text-slate-600">Modifiez les inscriptions, par exemple pour modifier les disponibilités ou indisponibilités. Changez une équipe de série.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/edit_registration.png" alt="Édition d'une Inscription" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 3: POULES (Theme Light) -->
+        <section id="step3" class="scroll-mt-32 bg-themeLight py-16 border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center lg:text-left">
+                    <span class="text-basqueGreen font-bold tracking-widest uppercase text-sm">Étape 3</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mt-2">Constitution des Poules</h2>
+                    <p class="text-xl text-slate-600 mt-4 max-w-3xl">Répartissez vos équipes pour lancer la phase qualificative.</p>
+                </div>
+
+                <div class="space-y-32">
+                    <!-- 3.1 Structure -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">3.1 Structure</h3>
+                            <p class="text-slate-600">En fonction du nombre d'équipes inscrites, définissez comment répartir les équipes en poules. Par exemple pour 18 équipes inscrites, 2 poules de 5 et 2 poules de 4. L'application fait une proposition que vous pouvez modifier.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/pools_structure.png" alt="Structure des Poules" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3.2 Répartition -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="lg:order-2 space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">3.2 Répartition</h3>
+                            <p class="text-slate-600">L'app distribue les équipes automatiquement en groupant les équipes ayant des disponibilités en commun. Vous pouvez ensuite échanger deux équipes manuellement si besoin.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/pools_team_swap.png" alt="Répartition des Poules" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 4: PLANIFICATION (White) -->
+        <section id="step4" class="scroll-mt-32 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center lg:text-left">
+                    <span class="text-basqueGreen font-bold tracking-widest uppercase text-sm">Étape 4</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mt-2">Planification</h2>
+                    <p class="text-xl text-slate-600 mt-4 max-w-3xl">Générez votre calendrier de rencontres en respectant les contraintes des joueurs.</p>
+                </div>
+
+                <div class="space-y-32">
+                    <!-- 4.1 Génération automatique -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-slate-800">4.1 Génération automatique</h3>
+                            <p class="text-slate-600">L'algorithme place les parties en respectant les disponibilités et indisponibilités des équipes. Il veille aussi à ce que les parties de chaque équipe soient suffisamment espacées.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/generated_calendar.png" alt="Calendrier Généré" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4.2 Retouches manuelles -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="lg:order-2 space-y-4">
+                            <h3 class="text-2xl font-bold text-slate-800">4.2 Retouches manuelles</h3>
+                            <p class="text-slate-600">Déplacez ou échangez les parties à votre guise si la planification automatique ne vous convient pas. Une fois satisfait, publiez le calendrier pour lancer la compétition.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/calendar_management.png" alt="Retouches Planification" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4.3 Gestion au quotidien -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">4.3 Gestion au quotidien</h3>
+                            <p class="text-slate-600">Déplacez, échangez ou ajournez des parties. Si le lieu de pratique n'est pas disponible, marquez des créneaux comme indisponibles.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/busy_time_slot.png" alt="Gestion des Créneaux Indisponibles" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 5: RÉSULTATS (Theme Light) -->
+        <section id="step5" class="scroll-mt-32 bg-themeLight py-16 border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center lg:text-left">
+                    <span class="text-basqueGreen font-bold tracking-widest uppercase text-sm">Étape 5</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mt-2">Résultats</h2>
+                    <p class="text-xl text-slate-600 mt-4 max-w-3xl">Entrez les scores en temps réel, et laissez Partida mettre les classements à jour.</p>
+                </div>
+
+                <div class="space-y-32">
+                    <!-- 5.1 Saisie des scores -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">5.1 Saisie des scores</h3>
+                            <p class="text-slate-600">Enregistrez, modifiez ou annulez les résultats des rencontres. Comptez les points pendant la partie grâce à notre compteur. Support du forfait et forfait général.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/game_counter_colored.png" alt="Saisie des Scores" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5.2 Classement au sein des poules -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="lg:order-2 space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">5.2 Classement au sein des poules</h3>
+                            <p class="text-slate-600">Le classement de la poule est recalculé instantanément en fonction du nombre de victoires et du goal-average.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/pool_ranking.png" alt="Classement de Poule" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5.3 Classement général -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">5.3 Classement général</h3>
+                            <p class="text-slate-600">Le classement général de la série est recalculé instantanément (points, goal-average). Il servira de base pour les phases finales.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/category-ranking.png" alt="Classement Général de Série" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5.4 Gestion des juges -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="lg:order-2 space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">5.4 Gestion des juges</h3>
+                            <p class="text-slate-600">Désignez des juges pour chaque rencontre. Les juges peuvent saisir les scores ou compter les points en direct pendant la partie.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/judge-management.png" alt="Gestion des Juges" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 6: PHASES FINALES (White) -->
+        <section id="step6" class="scroll-mt-32 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center lg:text-left">
+                    <span class="text-basqueGreen font-bold tracking-widest uppercase text-sm">Étape 6</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mt-2">Phases finales</h2>
+                    <p class="text-xl text-slate-600 mt-4 max-w-3xl">Gérez les tableaux de phases finales.</p>
+                </div>
+
+                <div class="space-y-32">
+                    <!-- 6.1 Structure -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">6.1 Structure</h3>
+                            <p class="text-slate-600">Définissez le nombre d'équipes directement qualifiées, les différents tours de barrage, les différents tableaux (principale, consolante) et la date de la finale.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/playoff_structure.png" alt="Structure Phases Finales" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6.2 Planification automatique -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="lg:order-2 space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">6.2 Planification automatique</h3>
+                            <p class="text-slate-600">Dès que la structure est validée, l'application génère l'ensemble des rencontres du tableau, des barrages jusqu'à la grande finale. En tant qu'organisateur, vous gardez la main pour modifier les date et heures de chaque partie si nécessaire.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/playoff_generation.png" alt="Calendrier Phases Finales" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6.3 Progression -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">6.3 Progression</h3>
+                            <p class="text-slate-600">Une fois que vous êtes satisfait de la planification, vous pouvez lancer officiellement les phases finales. Celles-ci deviennent alors publiques pour tous les joueurs. À chaque score saisi, les vainqueurs sont automatiquement propulsés au tour suivant dans l'arbre du tournoi.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/playoff_bracket.png" alt="Progression Phases Finales" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 7: VIGILANCE (Theme Light) -->
+        <section id="step7" class="scroll-mt-32 bg-themeLight py-16 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 text-center lg:text-left">
+                    <span class="text-basqueRed font-bold tracking-widest uppercase text-sm">Étape 7</span>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mt-2">Tableau de bord</h2>
+                    <p class="text-xl text-slate-600 mt-4 max-w-3xl">Suivez votre tournoi en un coup d'oeil via le tableau de bord dédié.</p>
+                </div>
+
+                <div class="space-y-32">
+                    <!-- 7.1 Points de vigilance -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">7.1 Points de vigilance</h3>
+                            <p class="text-slate-600">Suivez les parties non placées, sans score ou sans juge désigné. Visualisez la progression du tournoi et les parties du jour</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:-rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/dashboard.png" alt="Tableau de bord de Vigilance" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7.2 Organisateurs -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="lg:order-2 space-y-6">
+                            <h3 class="text-2xl font-bold text-slate-800">7.2 Organisateurs</h3>
+                            <p class="text-slate-600">Gérez l'équipe d'organisation de votre tournoi. Vous pouvez ajouter autant d'organisateurs que nécessaire ; tous possèdent exactement les mêmes droits d'administration sur le tournoi.</p>
+                        </div>
+                        <div class="flex justify-center items-center py-4">
+                            <div class="relative w-64 sm:w-72 transition-all duration-300 hover:scale-[1.02] hover:rotate-1">
+                                <div class="absolute -inset-4 bg-basqueGreen/10 blur-2xl rounded-full opacity-60"></div>
+                                <div class="relative z-10 rounded-[2.5rem] border-[8px] border-slate-950 phone-shadow overflow-hidden bg-slate-950">
+                                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                                        <div class="w-2.5 h-2.5 bg-slate-900 rounded-full border border-slate-800/40 absolute right-4"></div>
+                                    </div>
+                                    <img src="assets/img/co_organizers.png" alt="Gestion des Organisateurs" class="w-full h-auto block" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="py-24 bg-strongBasqueGreen text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold mb-8">Envie de tenter l'expérience ?</h2>
+            <p class="text-xl text-lightGreen/80 mb-12">Contactez-nous et démarrons notre premier tournoi ensemble.</p>
+            <a href="mailto:contact@partida.eus" class="inline-block px-12 py-5 bg-white text-strongBasqueGreen font-extrabold rounded-2xl hover:bg-lightGreen transition-all text-xl shadow-2xl">
+                Contacter l'équipe
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="py-4 border-t border-slate-800 text-sm text-center">
+                &copy; 2026 Partida. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id^="step"]');
+            const navLinks = document.querySelectorAll('.step-nav-link');
+            let isManualScroll = false;
+            let scrollTimeout;
+
+            const setActiveLink = (id) => {
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active-nav');
+                        link.classList.remove('bg-slate-100', 'text-slate-700');
+                    } else {
+                        link.classList.remove('active-nav');
+                        link.classList.add('bg-slate-100', 'text-slate-700');
+                    }
+                });
+            };
+
+            const options = {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                if (isManualScroll) return; // Skip if we're scrolling via click
+
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setActiveLink(entry.target.getAttribute('id'));
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => observer.observe(section));
+
+            // Handle clicks on nav links to prevent race conditions with observer
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    isManualScroll = true;
+                    const id = link.getAttribute('href').substring(1);
+                    setActiveLink(id);
+
+                    // Re-enable observer after scroll animation finishes
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        isManualScroll = false;
+                    }, 1000); 
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
